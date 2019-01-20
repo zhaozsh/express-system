@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/city-picker.css">
+</head>
+<body>
+    <div class="well well-large" style="height: 750px"><!-- container -->
+        <form class="form-inline text-center" action="#" role="form" id="form1">
+            <div class="col-xs-6 section-top-25" style="height: 300px">
+                始发地：<input readonly id="sendCity" type="text" data-toggle="city-picker" data-simple="true">
+                <div class="section-top-25"></div>
+                目的地：<input readonly id="receiveCity" type="text" data-toggle="city-picker" data-simple="true">
+                <div class="section-top-40"></div>
+                重量：&emsp;<input id="InputWeight" class="form-control" type="number" value="1" step="0.5" style="width: 100px;display: inline"> KG
+                <div class="text-center section-top-25">
+                    <button type="submit" class="btn btn-info" onclick="calculatePrice()">&emsp;&emsp; <span style="font-size: medium">
+                        查 询</span> &emsp;&emsp;</button>
+                </div>
+            </div>
+        </form>
+        <div class="col-xs-6 section-top-25 well" style="height: 300px">
+            <div class="section-top-25"></div>
+            <p>&emsp;实际计费重量：&emsp;<span style="font-size: xx-large" id="weight">0</span>KG</p>
+            <p>&emsp;预估配送时长：&emsp;<span style="font-size: xx-large" id="time">0</span>天</p>
+            <p>&emsp;预估所需运费：&emsp;<span style="font-size: xx-large" id="fee">0</span>元</p>
+            <p>&emsp;注：预估价格仅供参考！<span style="font-size: xx-large"></span></p>
+        </div>
+    </div>
+
+<style>
+    .city-picker-span {
+        width: 300px !important;
+        height: 39px !important;
+        line-height: 38px !important;
+    }
+    .city-picker-dropdown {
+        top: auto !important;
+    }
+</style>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/city-picker.data.js"></script>
+    <script src="../js/city-picker.js"></script>
+</body>
+<script type="text/javascript">
+    function calculatePrice(form){
+        var sendCity=$("#sendCity").val();
+		var receiveCity=$("#receiveCity").val();
+		var InputWeight=$("#InputWeight").val();
+		if(sendCity == null || sendCity == "")
+		{
+			alert("请选择始发地！");
+			$("#sendCity").html("请选择始发地！");
+			$("#sendCity").focus();
+			return false;
+		}
+		if(receiveCity == null || receiveCity == "")
+		{
+			alert("请选择目的地！");
+			$("#receiveCity").html("请选择目的地！");
+			$("#receiveCity").focus();
+			return false;
+		}
+		$("#weight").html(InputWeight);
+		$("#time").html("2");
+		$("#fee").html(12+3*InputWeight);
+		return true;
+    }
+</script>
+</html>

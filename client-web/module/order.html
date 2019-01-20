@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/city-picker.css">
+</head>
+<body>
+
+<div class="container">
+<div class="section-top-25"></div>
+    <form>
+        <fieldset>
+            <legend>寄件人信息 <span style="font-size: x-small;color: #6db19b"> （标*为必填）</span></legend>
+            <div class="col-xs-4">
+                <span class="footer_icon_red">*</span> 姓名 :
+                <input id="sender_name" name="sender_name" type="text" class="form-control input_line"
+                       placeholder="请填写寄件人姓名" required>
+            </div>
+            <div class="col-xs-4 col-xs-push-2"> 手机号 :
+                <input id="sender_phone" name="sender_phone" type="text" class="form-control input_line"
+                       placeholder="请填写手机号码">
+            </div>
+            <div class="shape"></div>
+            <div class="col-xs-4">
+                <span class="footer_icon_red">*</span> 上门地址（省市区） :
+                <input id="sender_city" class="form-control" readonly type="text" data-toggle="city-picker" data-simple="true">
+            </div>
+            <div class="col-xs-4 col-xs-push-2"> 公司名称 :
+                <input id="sender_company" name="sender_company" type="text" class="form-control input_line"
+                       placeholder="请填写公司名称">
+            </div>
+            <div class="shape"></div>
+            <div class="col-xs-12">
+                <span class="footer_icon_red">*</span> 详细地址 :
+                <input id="sender_address" name="sender_address" type="text" class="form-control input_line"
+                       placeholder="请填写所在街道以及详细地址" required>
+            </div>
+
+
+            <div class="shape"></div>
+            <legend>收件人信息 <span style="font-size: x-small;color: #6db19b"> （标*为必填）</span></legend>
+            <div class="col-xs-4">
+                <span class="footer_icon_red">*</span> 姓名 :
+                <input id="receiver_name" name="receiver_name" type="text" class="form-control input_line"
+                       placeholder="请填写收件人姓名" required>
+            </div>
+            <div class="col-xs-4 col-xs-push-2">
+                <span class="footer_icon_red">*</span> 手机号 :
+                <input id="receiver_phone" name="receiver_phone" type="text" class="form-control input_line"
+                       placeholder="请填写手机号码" required>
+            </div>
+            <div class="shape"></div>
+            <div class="col-xs-4">
+                <span class="footer_icon_red">*</span> 收件地址（省市区） :
+                <input id="receiver_city" class="form-control" readonly type="text" data-toggle="city-picker" required>
+            </div>
+            <div class="col-xs-4 col-xs-push-2"> 公司名称 :
+                <input id="receiver_company" name="receiver_company" type="text" class="form-control input_line"
+                       placeholder="请填写公司名称">
+            </div>
+            <div class="shape"></div>
+            <div class="col-xs-12">
+                <span class="footer_icon_red">*</span> 详细地址 :
+                <input id="receiver_address" name="receiver_address" type="text" class="form-control input_line"
+                       placeholder="请填写所在街道以及详细地址" required>
+            </div>
+
+
+            <div class="shape"></div>
+            <legend>上门取件时间 <span style="font-size: x-small;color: #6db19b"> （标*为必填）</span></legend>
+            <div class="col-xs-4 form-group">
+                <span class="footer_icon_red">*</span> 日期 :
+                <select class="form-control input_line" id="day">
+                    <option id="today">今天</option>
+                    <option id="tomorrow">明天</option>
+                    <option id="dayAftTom">星期五</option>
+                </select>
+            </div>
+            <div class="col-xs-4 col-xs-push-2">
+                <span class="footer_icon_red">*</span> 时间 :
+                <select class="form-control input_line" id="time">
+                    <option>上午（9:00-12:00）</option>
+                    <option>下午（13:00-16:00）</option>
+                </select>
+            </div>
+
+            <div class="shape section-top-50"></div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success btn-lg">&emsp;&emsp; <span style="font-size: medium">
+                    下 单</span> &emsp;&emsp;</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/city-picker.data.js"></script>
+<script src="../js/city-picker.js"></script>
+</body>
+</html>

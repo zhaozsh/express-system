@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3Rf2alVdDEvNTZ8LHR6Gi7urNA0YZiGK"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/city-picker.css">
+	<script type="text/javascript" src="http://lbsyun.baidu.com/jsdemo/data/points-sample-data.js"></script>
+</head>
+
+<body>
+<div class="container well well-large">
+    <form class="form-inline text-center" role="form" id="form1">
+        <div class="form-group text-center ">
+            <input type="text" class="form-control" id="cityName"
+                   placeholder="输入城区/街道名查询网点">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="searchCity()">&emsp;查询&emsp;</button>
+    </form>
+    <!--百度地图容器-->
+    <div class="section-top-30"></div>
+    <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+</div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(119.117604,26.200765),12);
+    }
+    function setMapEvent(){
+        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    //向地图添加控件
+    function addMapControl(){
+        var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:0});
+        map.addControl(navControl);
+    }
+    var map;
+    initMap();
+
+    function addMapOverlay(){
+        if (document.createElement('canvas').getContext) {  // 判断当前浏览器是否支持绘制海量点
+            var points = [];  // 添加海量点数据
+            for (var i = 0; i < data.data.length; i++) {
+                points.push(new BMap.Point(data.data[i][0], data.data[i][1]));
+            }
+            var options = {
+                shape: BMAP_POINT_SHAPE_WATERDROP
+            }
+            var pointCollection = new BMap.PointCollection(points, options);  // 初始化PointCollection
+            pointCollection.addEventListener('click', function (e) {
+                for (var i = 0; i < data.data.length; i++) {
+                    // 遍历所有的点匹配点击的经纬度，添加需要的标签信息
+                    if (data.data[i][0] == e.point.lng && data.data[i][1] == e.point.lat) {
+                        break;
+                    }
+                }
+                // 通过点击的坐标创建一个点对象，添加标签
+                var point = new BMap.Point(e.point.lng, e.point.lat);
+                var opts = {
+                    title: "哪都通物流服务网点",
+                    enableMessage: false,
+                }
+                var infowindow = new BMap.InfoWindow("经度：" + e.point.lng + "<br/>纬度：" + e.point.lat, opts);
+                map.openInfoWindow(infowindow, point);
+            });
+            map.addOverlay(pointCollection);  // 添加Overlay
+        } else {
+            alert('请用chrome、safari、IE8+以上浏览器查看');
+        }
+    }
+    function searchCity() {
+        // 百度地图API功能
+        var city = $("#cityName").val();
+        map.centerAndZoom(city,12);      // 用城市名设置地图中心点
+    }
+</script>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/city-picker.data.js"></script>
+<script src="../js/city-picker.js"></script>
+</html>

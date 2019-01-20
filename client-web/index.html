@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <title>哪都通物流</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+    <!----------------Global css------------------->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/revolution-slider/css/layers.css">
+    <link rel="stylesheet" href="vendors/revolution-slider/css/navigation.css">
+    <link rel="stylesheet" href="vendors/revolution-slider/css/settings.css">
+    <link rel="stylesheet" href="vendors/imagehover/css/imagehover.min.css">
+    <link rel="stylesheet" href="vendors/animate/animate.min.css">
+    <link rel="stylesheet" href="vendors/iCheck/css/all.css">
+    <link rel="stylesheet" href="vendors/sweetalert2/css/sweetalert2.min.css">
+    <!----------------custo css----------------->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+<!---------------Preloader-------------------->
+<div class="preloader" style="position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:100000;
+    backface-visibility: hidden;
+    background: #ffffff;">
+    <div style=" width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-position: center;
+    margin:-25px 0 0 -25px;">
+        <img src="images/loader.gif" alt="loading...">
+    </div>
+</div>
+<!-------------Preloader end-------------------->
+
+<!----------------Header------------------------>
+<div class="tp-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7 col-md-6">
+                <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-xs-5 col-md-6 text-right">
+                <span class="signin" data-toggle="modal" data-target="#myModal">
+                    <span class="hidden-xs">登录</span>
+                    <i class="fa fa-sign-in visible-xs-block" aria-hidden="true"></i>
+                </span>
+                <span class="register" data-toggle="modal" data-target="#myModal">
+                    <span class="hidden-xs">注册</span>
+                    <i class="fa fa-user-plus visible-xs-block" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<header>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <a class="navbar-brand section-top-10" href="index.html">
+                    <img src="images/3.png" class="img-responsive" alt="company-logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myMegamenu">
+                <div class="col-md-3 section-top-30 section-bottom-pad-40">
+                    <form action="#" method="post" id="subscribe" autocomplete="off">
+                        <div class="input-group sub_input">
+                            <input type="text" class="form-control" placeholder="输入运单号快速查询" required>
+                            <span class="input-group-addon"><button type="submit" class="subscribe_btn"><i
+                                    class="fa fa-paper-plane text-black" aria-hidden="true"></i></button></span>
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="list2"><a href="index.html" class="hvr-underline-from-center">首页</a></li>
+                    <li class="list2"><a href="service.html" class="hvr-underline-from-center">物流服务</a></li>
+                    <li class="list2"><a href="service.html" class="hvr-underline-from-center">大宗仓储</a></li>
+                    <li class="list2"><a href="about.html" class="hvr-underline-from-center">关于我们</a></li>
+                    <li class="list2"><a href="contact.html" class="hvr-underline-from-center">联系我们</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<!------------------Header end------------------>
+
+<!---------------------slider------------------->
+<div class="tp-banner-container rev_slider_wrapper fullwidthbanner-container" data-alias="news-hero72">
+    <div class="home_slider">
+        <ul>
+            <li data-index="rs-10" data-transition="fade" data-slotamount="7" class="bg-light"
+                data-easein="Power4.easeInOut" data-delay="5000" data-easeout="Power4.easeInOut" data-masterspeed="2000"
+                data-rotate="0" data-saveperformance="off" data-title="Love it?" data-description="">
+                <img src="images/new_slider1.jpg" alt="systemimg" data-kenburns="off" data-bgposition="center center"
+                     data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120"
+                     data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-bgfit="cover"
+                     data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+            </li>
+            <li data-transition="Curtain from Middle" data-slotamount="7" data-delay="5000" data-masterspeed="600"
+                class="bg-light">
+                <img src="images/new_slider4.png" alt="girlimg" data-bgposition="right bottom"
+                     data-duration="11000" data-ease="Linear.easeNone" data-bgfit="cover"
+                     data-bgpositionend="left top">
+                <div class="hidden-xs tp-caption  sfl tp-resizeme" data-x="510"
+                     data-y="350" data-speed="1000" data-start="2000" data-easing="Power3.easeInOut"
+                     data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1"
+                     style="z-index: 5;">
+                    <a href="contact.html" class="slider_btn">联系我们</a>
+                </div>
+            </li>
+            <!---->
+            <li data-index="rs-82" data-transition="fade" data-slotamount="7" data-masterspeed="500" data-delay="5000"
+                data-saveperformance="on"
+                data-title="Intro Slide" data-bgfit="cover">
+                <img src="images/new_slider3.png" alt="girlimg" data-bgposition="right bottom"
+                     data-duration="11000" data-ease="Linear.easeNone" data-bgfit="cover"
+                     data-bgpositionend="left top">
+            </li>
+        </ul>
+    </div>
+</div>
+<!-------------------Slider end----------------->
+
+<!------------------Function-------------------->
+<div class="container">
+    <div class="col-sm-7 section-top-10">
+        <div class="row" style="width: 1200px">
+            <div class="col-md-3">
+                <div class="about_col_space">
+                    <div class="row profile1">
+                        <div class="col-md-3 col-sm-3 col-xs-3 section-top-20">
+                            <img src="images/responsible-energy-use.png" class="img-responsive" alt="about_icons">
+                        </div>
+                        <div class="profile_data col-md-9 col-sm-9 col-xs-9 section-top-20">
+                            <a href="service.html"><h4 class="profile_data">我要寄件</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="about_col_space">
+                    <div class="row profile1">
+                        <div class="col-md-3  col-xs-3 section-top-20">
+                            <img src="images/diversity.png" class="img-responsive" alt="about_icons">
+                        </div>
+                        <div class="profile_data col-md-9  col-xs-9 section-top-20">
+                            <a href="service.html"><h4 class="profile_data">运单追踪</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="about_col_space">
+                    <div class="row profile1">
+                        <div class="col-md-3  col-xs-3 section-top-20">
+                            <img src="images/global.png" class="img-responsive" alt="about_icons">
+                        </div>
+                        <div class="profile_data col-md-9  col-xs-9 section-top-20">
+                            <a href="service.html"><h4 class="profile_data">网点查询</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="about_col_space">
+                    <div class="row profile1">
+                        <div class="col-md-3  col-xs-3 section-top-20">
+                            <img src="images/leadrship.png" class="img-responsive" alt="about_icons">
+                        </div>
+                        <div class="profile_data col-md-9  col-xs-9 section-top-20">
+                            <a href="#"><h4 class="profile_data">收费标准</h4></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------Function end----------------->
+
+<!----------------Our Services Section---------->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 m-t-50">
+            <h2 class="heading underline">我们的服务</h2>
+            <p class="text-center">基于物流，融通金融，流通商业</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="row m-t-50">
+                <div class="col-xs-12">
+                    <img src="images/diversity.png" alt="bigdata" class="img-responsive services_icon center-block">
+                </div>
+                <div class="col-xs-12 text-center">
+                    <h5>快递物流</h5>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore etdolore magna aliqua..</p>
+                    <a href="#" class="text-success">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row m-t-50">
+                <div class="col-xs-12">
+                    <img src="images/responsible-energy-use.png" alt="bigdata" class="img-responsive services_icon center-block">
+                </div>
+                <div class="col-xs-12 text-center">
+                    <h5>仓储冷库</h5>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore etdolore magna aliqua..</p>
+                    <a href="#" class="text-success">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="row m-t-50">
+                <div class="col-xs-12">
+                    <img src="images/global.png" alt="bigdata"
+                         class="img-responsive services_icon center-block">
+                </div>
+                <div class="col-xs-12 text-center">
+                    <h5>供应链金融</h5>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore etdolore magna aliqua..</p>
+                    <a href="#" class="text-success">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------Our Services Section End---------->
+
+<!--------------------CountUp------------------->
+<section class="home3_countup_section section-top-50 parallax">
+    <div class="container">
+        <div class="row m-t-70">
+            <div class="col-md-3 col-sm-6  text-center text-white">
+                <span class="countup_options" id="Overseas">31</span>
+                <h4 class="text-white">Overseas Operation</h4>
+            </div>
+            <div class="col-md-3 col-sm-6  text-center text-white">
+                <span class="countup_options" id="Investors">560</span>
+                <h4 class="text-white">Investors</h4>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center text-white">
+                <span class="countup_options" id="Client">200</span>
+                <h4 class="text-white">Client Support</h4>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center text-white section-bottom-pad-40">
+                <span class="countup_options" id="Success">96</span><span class="countup_options">%</span>
+                <h4 class="text-white">Success Rate</h4>
+            </div>
+        </div>
+    </div>
+    <br/>
+</section>
+<!-------------------CountUp End---------------->
+
+<!-------------------We can Section------------->
+<section class="bg-default section-bottom-pad-40">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 m-t-50">
+                <h2 class="heading underline">We Can do</h2>
+                <p class="text-center">Southwest Airlines is successful because the company understands it's a customer
+                    service company. It also happens to be an airline.</p>
+            </div>
+        </div>
+        <div class="row m-t-50">
+            <div class="col-sm-4">
+                <img src="images/home2_slider_layer3.png" alt="img" class="img-responsive center-block">
+            </div>
+            <div class="col-sm-4">
+                <ul class="list-unstyled">
+                    <li class="link_transition"><a href="services.html"><i class="fa fa-caret-right"></i><i
+                            class="fa fa-caret-right"></i> &nbsp;Big Data & Analytics</a></li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Cloud
+                        Solutions &
+                        Services</a></li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Web
+                        Development</a></li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Certified
+                        Electricians</a></li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Insurance
+                        against
+                        Damages</a></li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Management of
+                        Construction</a></li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Guaranteed
+                        Quality</a>
+                    </li>
+                    <li class="link_transition  section-top-10"><a href="services.html"><i
+                            class="fa fa-caret-right"></i><i class="fa fa-caret-right"></i> &nbsp;Construction
+                        Activities</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <div id="Services_Carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#Services_Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Services_Carousel" data-slide-to="1"></li>
+                        <li data-target="#Services_Carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active" data-interval="3000">
+                            <figure class="imghvr-zoom-in">
+                                <img src="images/gallery2.jpg" alt="people" class="img-responsive">
+                                <figcaption>
+                                    <div class="text-center">
+                                        <h6 class="text-white">冷运速配</h6>
+                                        <p class="text-white">
+                                            依托强大的冷链运输网和温控管理系统，为食品&amp;医药冷链客户提供专业的冷运服务。
+                                        </p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="item" data-interval="3000">
+                            <figure class="imghvr-zoom-in">
+                                <img src="images/portfolio5.jpg" alt="people" class="img-responsive">
+                                <figcaption>
+                                    <div class="text-center">
+                                        <h6 class="text-white">快递寄件</h6>
+                                        <p class="text-white">
+                                            依托自有丰富运力资源，通过多项不同的快递产品和增值服务，来满足客户多样化、个性化的寄件需求。
+                                        </p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="item" data-interval="3000">
+                            <figure class="imghvr-zoom-in">
+                                <img src="images/newsroom3.jpg" alt="people" class="img-responsive">
+                                <figcaption>
+                                    <div class="text-center">
+                                        <h6 class="text-white">供应链金融</h6>
+                                        <p class="text-white">
+                                            基于多元业务的产业链金融服务体系，可提供商业订单、融资仓储等一系列“物流+金融”综合解决方案。
+                                        </p>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#Services_Carousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#Services_Carousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!---------------We can Section End------------->
+
+<!------------Login And Register Modal---------->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content"><br>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs ">
+                    <li id="signin_tab" class="active"><a href="#signin" data-toggle="tab">登录</a></li>
+                    <li id="reg_tab"><a href="#signup" data-toggle="tab">注册</a></li>
+                </ul>
+            </div>
+            <div class="modal-body">
+                <div id="myTabContent" class="tab-content">
+                    <div class=" signin tab-pane fade active in" id="signin">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group section-top-10">
+                                    <label class="control-label" for="userid"><span
+                                            class="glyphicon glyphicon-user text-primary"></span> 手机号 :</label>
+                                    <div class="controls">
+                                        <input id="userid" name="userid" type="text" class="form-control input-medium"
+                                               placeholder="Phone" required>
+                                    </div>
+                                </div>
+                                <div class="control-group section-top-10">
+                                    <label class="control-label" for="passwordinput"><span
+                                            class="glyphicon glyphicon-eye-open text-primary"></span> 密码 :</label>
+                                    <div class="controls">
+                                        <input type="password" id="passwordinput" name="passwordinput"
+                                               class="form-control input-medium" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" class="blue">记住密码</label>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls section-top-10">
+                                        <button id="signin_btn" name="signin" class="btn btn-success form-control">登录
+                                        </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade signup" id="signup">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <div class="control-group section-top-10">
+                                    <label for="user"><span class="glyphicon glyphicon-user text-primary"></span> 手机号
+                                        :</label>
+                                    <div class="controls">
+                                        <input id="user" name="userid" class="form-control input-large" type="text"
+                                               placeholder="Phone" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group section-top-10">
+                                    <label class="control-label" for="Email_id"><span
+                                            class="glyphicon glyphicon-envelope text-primary"></span> 邮箱 :</label>
+                                    <div class="controls">
+                                        <input id="Email_id" name="Email" class="form-control input-large" type="email"
+                                               placeholder="abcdef@xyz.com" required>
+                                    </div>
+                                </div>
+                                <div class="control-group section-top-10">
+                                    <label for="password"><span
+                                            class="glyphicon glyphicon-eye-open text-primary"></span> 密码 :</label>
+                                    <div class="controls">
+                                        <input id="password" name="password" class="form-control input-large"
+                                               type="password" placeholder="Password" required>
+                                    </div>
+                                </div>
+                                <div class="control-group section-top-10">
+                                    <label class="control-label" for="reenterpassword"><span
+                                            class="glyphicon glyphicon-repeat text-primary"></span> 再次输入密码 :</label>
+                                    <div class="controls">
+                                        <input id="reenterpassword" class="form-control input-large"
+                                               name="reenterpassword" type="password" placeholder="Re Enter Password" required="">
+                                    </div>
+                                </div>
+                                <div class="control-group section-top-10">
+                                    <label class="control-label" for="confirmsignup"></label>
+                                    <div class="controls">
+                                        <button id="confirmsignup" name="confirmsignup" class="btn btn-success form-control">
+                                            注册</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------Login And Register Modal end--------->
+
+<!----------------Footer Start------------------>
+
+<div class="shape section-top-15"></div>
+
+<section class="footer_one">
+    <footer>
+        <div class="container">
+            <div class="row section-top-40">
+                <div class="col-md-3 col-sm-6 section-top-25">
+                    <h4 class="text-white">物流</h4>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-md-1  col-xs-1"><a href="service.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="service.html" class="div_hover2">快递服务</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="service.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="service.html" class="div_hover2">冷运服务</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="service.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="service.html" class="div_hover2">仓储服务</a><br/></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3  col-lg-3 col-sm-6 section-top-25">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="text-white">服务支持</h4>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1  col-xs-1"><a href="#"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="#" class="div_hover2">运费时效查询</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="#"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="#" class="div_hover2">收寄范围查询</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="#"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="#" class="div_hover2">服务网点查询</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="#"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="#" class="div_hover2">收寄标准查询</a><br/></div>
+                        </div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><br/><br/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 section-top-25">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="text-white">关于我们</h4>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1  col-xs-1"><a href="about.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="about.html" class="div_hover2">关于哪都通</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="about.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="about.html" class="div_hover2">新闻资讯</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="about.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="about.html" class="div_hover2">服务公告</a><br/></div>
+                        </div>
+                        <div class="col-md-1  col-xs-1"><a href="contact.html"><i class="fa fa-caret-right div_hover1"
+                                                                               aria-hidden="true"></i></a></div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><a href="contact.html" class="div_hover2">合作咨询</a><br/></div>
+                        </div>
+                        <div class="footer_contact">
+                            <div class="col-md-10  col-xs-10"><br/><br/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 section-top-25">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="text-white">联系我们</h4>
+                            <hr/>
+                        </div>
+                        <div class="col-xs-12">
+                            <span class="foot_icon">
+                            <a href="#"><i class="fa fa-facebook section-top-10 footer_social_icons"
+                                           aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter section-top-10 footer_social_icons"
+                                           aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-linkedin section-top-10 footer_social_icons"
+                                           aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram section-top-10 footer_social_icons"
+                                           aria-hidden="true"></i></a>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+<!--------------Footer section End-------------->
+
+<!-----------------Copy rights------------------>
+<section class="copy-rights">
+    <div class="container ">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 section-top-15">
+                <p class="footer_text_color"><a href="index.html">首页 丨</a> &nbsp;
+                    <a href="service.html">物流服务 丨</a> &nbsp;
+                    <a href="about.html">关于我们 丨</a> &nbsp;
+                    <a href="contact.html">联系客服</a>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 text-right section-top-15">
+                <p class="footer_text_color  ">Copyright &copy; 哪都通物流 版权所有 闽 ICP 备105032015002号</p>
+            </div>
+        </div>
+        <a href="#" id="return-to-top"><img src="images/backto.png" alt="返回顶部"></a>
+    </div>
+</section>
+<!----------------Copy rights End--------------->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="vendors/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+<script src="vendors/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendors/iCheck/js/icheck.js"></script>
+<script src="vendors/countup/js/countUp.min.js"></script>
+<script src="vendors/sweetalert2/js/sweetalert2.min.js"></script>
+<script src="vendors/jribbble/js/jribbble.min.js"></script>
+<!----------------page Level Js----------------->
+<script src="js/custom.js"></script>
+</body>
+</html>

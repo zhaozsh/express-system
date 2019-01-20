@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/city-picker.css">
+</head>
+<body>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        服务网点查询
+                    </div>
+
+                    <div class="card-body">
+                        <form class="row">
+                            <div class="col-md-3">
+                                <label for="single-select">网点类型：</label>
+                                <select id="single-select1" class="form-control">
+                                    <option>所有</option>
+                                    <option>物流站点</option>
+                                    <option>中转站点</option>
+                                    <option>仓储站点</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="single-select">所在地：</label>
+                                    <input readonly id="sendCity" type="text" data-toggle="city-picker" data-simple="true">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="single-select">网点编号：</label>
+                                <input id="placeholder-input" class="form-control" placeholder="请输入网点编号">
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="btn-group section-top-28">
+                                    <button type="submit" class="btn btn-outline-primary">
+                                        <i class="fa fa-search"></i>&nbsp; 查询
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-primary">
+                                        <i class="fa fa-redo-alt"></i>&nbsp; 重置
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        网点查询结果
+                        <div class="btn-group" style="float:right">
+                            <button type="button" class="btn btn-success">
+                                <i class="fa fa-plus"></i>&nbsp; 新增
+                            </button>
+
+                            <button type="button" class="btn btn-primary">
+                                <i class="fa fa-align-center"></i> &nbsp; 详情
+                            </button>
+
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa fa-download"></i> 批量导入
+                            </button>
+
+                            <button type="button" class="btn btn-danger">
+                                <i class="fa fa-trash"></i> &nbsp; 删除
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th data-options="field:'ck',checkbox:true"></th>
+                                        <th field="id" hidden="true">ID</th>
+                                        <th field="id2">Name</th>
+                                        <th field="id3">Sales</th>
+                                        <th field="id4">Price</th>
+                                        <th field="id5">Discount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .city-picker-span {
+        width: 100% !important;
+        height: 36px !important;
+        line-height: 36px !important;
+    }
+    .city-picker-dropdown {
+        top: auto !important;
+    }
+</style>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/popper.js/popper.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/chart.js/chart.min.js"></script>
+<script src="../js/demo.js"></script>
+<script src="../js/city-picker.data.js"></script>
+<script src="../js/city-picker.js"></script>
+</body>
+</html>
